@@ -16,7 +16,7 @@ const header = () => {
             <Tabs
                 value={value}
                 onChange={handleChange}
-                textColor={color}
+                textColor="secondary"
                 indicatorColor="secondary"
                 sx={{ p: '1.5em', pt: '0', pb: '0' }}
             >
