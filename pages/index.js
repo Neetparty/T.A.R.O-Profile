@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
+export default function Home({ children }) {
   return (
     <div>
       <Head>
@@ -15,9 +15,7 @@ export default function Home() {
       <main>
         <div className={styles.mainContent}>
           <div className={styles.test}>
-            <h1>
-              Hello World!!
-            </h1>
+          { children }
           </div>
         </div>
       </main>

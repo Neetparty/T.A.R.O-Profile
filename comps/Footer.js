@@ -6,7 +6,7 @@ const footer = () => {
     return (
         <div>
           <Typography component="div">
-            <Box sx={{ bgcolor: 'primary.main', color: 'primary.contrastText', p: 2 }}>
+            <Box sx={{ bgcolor: 'secondary.main', color: 'secondary.contrastText', p: 2 }}>
               <Box sx={{ textAlign: 'right', m: 1 }}>Copyright @ H0shiNa</Box>
             </Box>
           </Typography>
