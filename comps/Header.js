@@ -4,7 +4,7 @@ import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
 
 const header = () => {
-    const [value, setValue] = React.useState('neet');
+    const [value, setValue] = React.useState('Neetparty');
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
@@ -12,11 +12,8 @@ const header = () => {
     return ( 
         <Box sx={{ width: '100%', height: '0', m: '1em', p: '0' }}>
             <Tabs
-                value={value}
                 onChange={handleChange}
                 sx={{ p: '1.5em', pt: '0', pb: '0' }}
-                textColor="secondary"
-                indicatorColor="secondary"
             >
                 <Tab sx={{ width: '20%', my: 0.4 }} value="Neetparty" label="Neetparty" href={value} />
                 <Tab sx={{ width: '20%', my: 0.4 }} value="Zcross" label="Zcross" href={value} />

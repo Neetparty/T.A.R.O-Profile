@@ -14,9 +14,7 @@ export default function Home({ children }) {
 
       <main>
         <div className={styles.mainContent}>
-          <div className={styles.test}>
-          { children }
-          </div>
+        { children }
         </div>
       </main>
     </div>
