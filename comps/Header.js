@@ -1,27 +1,32 @@
 import * as React from 'react';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
+import { Button } from '@mui/material';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { grey } from '@mui/material/colors';
+import { Home } from '@mui/icons-material';
+
+const theme = createTheme({
+    palette: {
+      secondary: {
+        main: grey[700],
+      }
+    }
+  })
 
 const header = () => {
-    const [value, setValue] = React.useState('Neetparty');
-
-    const handleChange = (event, newValue) => {
-        setValue(newValue);
-    };
     return ( 
-        <Box sx={{ width: '100%', height: '0', m: '1em', p: '0' }}>
-            <Tabs
-                onChange={handleChange}
-                sx={{ p: '1.5em', pt: '0', pb: '0' }}
-            >
-                <Tab sx={{ width: '20%', my: 0.4 }} value="Neetparty" label="Neetparty" href={value} />
-                <Tab sx={{ width: '20%', my: 0.4 }} value="Zcross" label="Zcross" href={value} />
-                <Tab sx={{ width: '20%', my: 0.4 }} value="Neverterra" label="Neverterra" href={value} />
-                <Tab sx={{ width: '20%', my: 0.4 }} value="TaeZo" label="TaeZo_" href={value} />
-                <Tab sx={{ width: '20%', my: 0.4 }} value="MoonSky" label="MoonSky" href={value} />
-            </Tabs>
-        </Box>
+        <ThemeProvider theme={theme}>
+            <Box sx={{ width: '100%', height: '0', m: '1em', p: '0' }}>
+                <Button sx={{ width: '5%', my: 0.4 }} color="secondary" href="/">
+                    <Home />
+                </Button>
+                <Button sx={{ width: '18%', my: 0.4 }} color="secondary" variant="text" href="Neetparty" >Neetparty</Button>
+                <Button sx={{ width: '18%', my: 0.4 }} color="secondary" variant="text" href="Neverterra" >Neverterra</Button>
+                <Button sx={{ width: '18%', my: 0.4 }} color="secondary" variant="text" href="Zcross" >Zcross</Button>
+                <Button sx={{ width: '18%', my: 0.4 }} color="secondary" variant="text" href="TaeZo" >TaeZo_</Button>
+                <Button sx={{ width: '18%', my: 0.4 }} color="secondary" variant="text" href="MoonSky" >MoonSky</Button>
+            </Box>
+        </ThemeProvider>
      );
 }
  

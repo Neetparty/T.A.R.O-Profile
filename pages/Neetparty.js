@@ -1,33 +1,23 @@
 import Index from './index'
-import styles from '../styles/Home.module.css'
-import Avatar from '@mui/material/Avatar';
-import Stack from '@mui/material/Stack';
+import N_styles from '../styles/Neet.module.css'
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-
+import NeetAvatar from '../comps/Neet/Neet_Avatar'
+import NeetInfo from '../comps/Neet/Neet_Info'
 
 const Neetparty = () => {
     return(
         <Index>
-            <div className={styles.NeetContent}>
-                <Stack direction="row" spacing={2}>
-                    <Avatar
-                        alt="Remy Sharp"
-                        src="https://www.pngrepo.com/png/81103/512/avatar.png"
-                        sx={{ width: 150, height: 150 }}
-                    />
-                    <h1 className={styles.NeetProfile}>Neetparty</h1>
-                </Stack>
-                <div className={styles.NeetGrid} >
-                    <div className={styles.NeetAbout}>
-                        <h2>Hi I am about!</h2>
-                    </div>
-                    <div className={styles.NeetItem-1}>
-                        <Card className={styles.NeetCard} sx={{ maxWidth: 345 }}>
+            <div className={N_styles.NeetContent}>
+                <NeetAvatar />
+                <div className={N_styles.NeetGrid} >
+                    <NeetInfo />
+                    <div className={N_styles.NeetItem1}>
+                        <Card className={N_styles.NeetCard} sx={{ maxWidth: 345 }}>
                             <CardMedia
                                 component="img"
                                 height="140"
@@ -49,8 +39,8 @@ const Neetparty = () => {
                             </CardActions>
                         </Card>
                     </div>
-                    <div className={styles.NeetItem-2}>
-                        <Card className={styles.NeetCard} sx={{ maxWidth: 345 }}>
+                    <div className={N_styles.NeetItem2}>
+                        <Card className={N_styles.NeetCard} sx={{ maxWidth: 345 }}>
                             <CardMedia
                                 component="img"
                                 height="140"
