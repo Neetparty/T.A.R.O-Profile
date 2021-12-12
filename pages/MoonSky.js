@@ -1,10 +1,13 @@
 import Index from './index'
+import Layout from '../comps/Layout'
 
 const MoonSky = () => {
     return(
-        <Index>
-            <h1>MoonSky</h1>
-        </Index>
+        <Layout>
+            <Index>
+                <h1>MoonSky</h1>
+            </Index>
+        </Layout>
     )
 }
 

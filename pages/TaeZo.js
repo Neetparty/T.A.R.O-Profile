@@ -1,10 +1,13 @@
 import Index from './index'
+import Layout from '../comps/Layout'
 
 const TaeZo = () => {
     return(
-        <Index>
-            <h1>TaeZo</h1>
-        </Index>
+        <Layout>
+            <Index>
+                <h1>TaeZo</h1>
+            </Index>
+        </Layout>
     )
 }
 
